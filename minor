@@ -1,0 +1,415 @@
+sem 1 
+
+n = int(input())
+k = int(input())
+number = k//n
+print(number)
+
+n = int(input())
+k = n%10
+print(k)
+
+n = 'A'*100
+print(n)
+
+N = input()
+n = N * 100
+y = int(n) ** 2
+print(y)
+
+n = int(input())
+d1=n//100
+d2=n%10
+d3=(n//10)%10
+k = d1 + d2 + d3
+print(k)
+
+sem 2
+
+h1= int(input())
+m1 = int(input())
+s1 = int(input())
+h2 = int(input())
+m2 = int(input())
+s2 = int(input())
+print((h2*3600 + m2*60 + s2) - (h1*3600 + m1*60 + s1))
+
+import math
+N = int(input())
+M = int(input())
+print(math.ceil(M/N))
+
+n = int(input())
+m = int(input())
+if n>m:
+    print(1)
+elif n == m:
+    print(0)
+else:
+    print(2)
+
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1*x2>0 and y1*y2>0:
+    print("YES")
+else:
+    print("NO")
+    
+    
+n = int(input())
+m = int(input())
+k = int(input())
+if n > m and n >k:
+    print(n)
+elif m > k:
+    print(m)
+else:
+    print(k)
+    
+h1 = int(input())
+v1 = int(input())
+h2 = int(input())
+v2 = int(input())
+if (v1+h1)%2 != (v2 +h2)%2:
+    print('NO')
+elif v1>v2:
+    print('NO')
+elif v2-v1<abs(h2-h1):
+    print('NO')
+else:
+    print('YES')
+    
+k = int(input())
+m = int(input())
+n = int(input())
+if n <= k:
+    print(2*m)
+else:
+    if (2*n) % k == 0:
+        print((2*n//k)*m)
+    else:
+        print((2*n // k + 1) * m)
+        
+ hw 1
+ 
+ n = int(input())
+k = int(input())
+print(k % n)
+
+N = int(input())
+print(2**N)
+
+N = int(input())
+if N % 2 == 0:
+    print(N+2)
+else:
+    print(N+1)
+    
+A = int(input())
+B = int(input())
+N = int(input())
+k = ((A*100 + B)*N)
+print(k//100, k % 100, sep=' ')
+
+N = int(input())
+h = N//3600
+m = N % 3600//60
+s = N % 3600 % 60
+if m < 10:
+    m = '0'+str(m)
+if s < 10:
+    s = '0'+str(s)
+if h < 24:
+    print(h, m, s, sep=':')
+else:
+    print(h % 24, m, s, sep=':')
+
+sem 3
+
+N = int(input())
+i = 1
+while i**2 <= N:
+    print(i**2)
+    i = i + 1
+
+n = int(input())
+s = 0
+for i in range(1, n+1):
+    s = s + i**2
+print(s)
+
+i = int(input())
+s = 0
+while i != 0:
+     s = s + i
+     i = int(input())
+print(s)
+
+i = int(input())
+k = 0
+while i != 0:
+    if i % 2 == 0:
+        k = k + 1
+    i = int(input())
+print(k)
+
+i = int(input())
+k = 0
+while i != 0:
+    if i1 < i:
+        k = k + 1
+    i1 = i
+    i = int(input())
+print(k)
+
+n = int(input())
+k = 0
+for i in range(1, n + 1):
+    if str(i)[0:] == str(i)[::-1]:
+        k += 1
+print(k)
+
+import math
+x = int(input())
+n = 0
+sumSequence = 0
+sumKvadrat = 0
+while x != 0:
+    n += 1
+    sumKvadrat += x**2
+    sumSequence += x
+    x = int(input())
+s = sumSequence/n
+q = math.sqrt((sumKvadrat + s**2*n - 2 * s * sumSequence)/(n - 1))
+print(q)
+
+sem 4
+
+n = input()
+print(n[2])
+print(n[-2])
+print(n[0:5])
+print(n[0:len(n)-2])
+print(n[::2])
+print(n[1::2])
+print(n[::-1])
+print(n[::-2])
+print(len(n))
+
+n = input()
+print((n.count(' ') + 1))
+
+S = input()
+first = S.find('f')
+second = S. rfind('f')
+if first == -1:
+    print(' ')
+elif first == second:
+    print(first)
+else:
+    print(first, second)
+
+S = input()
+print(S.replace('@', ''))
+
+S = input()
+S = S[0:S.find('h')+1]+S[S.find('h')+1:S.rfind('h')] * 2  + S[S.rfind('h'):len(S)]
+print(S)
+
+S = input()
+for i in S:
+    if i == '1':
+        S = (S.replace('1', 'one'))
+print(S)
+
+s = input()
+a = s[s.find('h') + 1:s.rfind('h')]
+s = s[0:s.find('h')+1]+ a.replace('h', 'H')+s[s.rfind('h'):]
+print(s)
+
+s = input()
+k = list(s)
+print('*'.join(k))
+
+s = input()
+for i in range(len(s)):
+    if i % 3 != 0:
+        print(s[i], end='')
+        
+hw2
+
+A = int(input())
+B = int(input())
+for i in range(A, B + 1):
+    print(i, end=' ')
+
+s = input()
+print(s[s.find(' ')+1:len(s)]+s[s.find(' ')]+s[0:s.find(' ')])
+
+n = int(input())
+for i in range(1, n + 1):
+    for k in range(1, i + 1):
+        print(k, sep='', end='')
+    print()
+    
+now = int(input())
+nowMax = now
+while now != 0:
+    if now > nowMax:
+        nowMax = now
+    now = int(input())
+print(nowMax)
+
+s = input()
+if s.find('f') == -1:
+    print(-2)
+elif s.find('f') == s.rfind('f'):
+    print(-1)
+else:
+    print(s.find('f', s.find('f') + 1))
+
+sem 5    
+
+a = [int(i) for i in input().split()]
+for i in range(len(a)):
+    if i % 2 == 0:
+        print(a[i], end=' ')
+        
+a = [int(i) for i in input().split()]
+for i in a:
+    if i % 2 == 0:
+        print(i, end=' ')
+        
+ a = [int(i) for i in input().split()]
+number = 0
+for i in range(1, len(a)-1):
+    if a[i - 1] < a[i] and a[i] > a[i + 1]:
+        number += 1
+print(number)
+
+a = [int(i) for i in input().split()]
+number = 0
+for i in range(0, len(a)-1):
+    if a[i] != a[i + 1]:
+        number += 1
+print(number+1)
+
+a = [int(i) for i in input().split()]
+print(*(a[::-1]))
+
+n, k = list(map(int, input().split()))
+row_of_kegles = ['I'] * n
+for i in range(k):
+    left, right = [int(s) for s in input().split()]
+    for j in range(left - 1, right):
+        row_of_kegles[j] = '.'
+print(''.join(row_of_kegles))
+
+n = 8
+x = []
+y = []
+for i in range(n):
+    new_x, new_y = list(map(int, input().split()))
+    x.append(new_x)
+    y.append(new_y)
+answer = 'NO'
+for i in range(n):
+    for j in range(i + 1, n):
+        if x[i] == x[j] or y[i] == y[j] or abs(x[i] - x[j]) == abs(y[i] - y[j]):
+            answer = 'YES'
+print(answer)
+
+myNumbers = list(map(int, input().split()))
+a = -1
+for i in range(len(myNumbers)):
+    if myNumbers[i] == 0 and a == -1:
+        a = i
+    elif myNumbers[i] != 0 and a != -1:
+        myNumbers[a] = myNumbers[i]
+        myNumbers[i] = 0
+        a += 1
+print(*myNumbers)
+
+sem 6
+
+print(len(set(input().split())))
+
+print(len(set(input().split()) & set(input().split())))
+
+mySet1 = set(map(int, input().split()))
+mySet2 = set(map(int, input().split()))
+common = sorted(mySet1 & mySet2)
+print(*common)
+
+myDict = {}
+for i in range(int(input())):
+    data = list(input().split())
+    for j in range(1, len(data)):
+           myDict[data[j]] = data[0]
+for m in range(int(input())):
+       print(myDict[input()])
+       
+text = open('input.txt', 'r', encoding='utf8')
+k = text.read().strip('\n').split()
+count = {}
+for word in k:
+    count[word] = count.get(word,0) + 1
+    print(count[word] - 1, end=' ')
+    
+from collections import defaultdict
+from sys import stdin
+ 
+clients = defaultdict(lambda: defaultdict(int))
+for line in stdin.readlines():
+    client, thing, value = line.split()
+    clients[client][thing] += int(value)
+         
+for client in sorted(clients):
+    print(client + ':')
+    for thing in sorted(clients[client]):
+        print(thing, clients[client][thing])
+   if man not in p_tree:
+        return 0
+    else:
+        return 1 + height(p_tree[man])
+
+def height(man):
+p_tree = {}
+n = int(input())
+for i in range(n - 1):
+    child, parent = input().split()
+    p_tree[child] = parent
+ 
+heights = {}
+for man in set(p_tree.keys()).union(set(p_tree.values())):
+    heights[man] = height(man)
+ 
+for key, value in sorted(heights.items()):
+    print(key, value)
+    
+n = int(input())
+accents = {}
+for i in range(n):
+    word = input()
+    base_form = word.lower()
+    if base_form not in accents:
+        accents[base_form] = set()
+    accents[base_form].add(word)
+ 
+errors = 0
+sent = input().split()
+for word in sent:
+    base_form = word.lower()
+    if (base_form in accents and word not in accents[base_form]
+            or len([l for l in word if l.isupper()]) != 1):
+        errors += 1
+print(errors)
+
+
+    
+
+
+
+
+
